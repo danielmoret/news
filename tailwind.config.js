@@ -7,7 +7,11 @@ module.exports = {
     './template.html'
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        newyorkfont: ['UnifrakturCook', 'cursive']
+      }
+    }
   },
   plugins: []
 }
