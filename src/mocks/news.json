@@ -1,23 +1,24 @@
 [
   {
-    "title": "title 1",
-    "content": "content 1",
-    "author": "author 1",
-    "category": "category 1",
-    "image": "image 1",
-    "created_at": 1689108423,
-    "updated_at": 1689108423,
-    "id": "1"
+    "title": "Vermont Floods Show Limits of U.S. Efforts to Adapt to Climate Change",
+    "content": "The lack of a comprehensive national rainfall database and current flood maps hampers the ability to prepare for storms intensified by climate change.",
+    "author": "Christopher Flavelle",
+    "category": "general",
+    "image": "https://static01.nyt.com/images/2023/07/11/multimedia/11cli-notready-01-vfwl/11cli-notready-01-vfwl-superJumbo.jpg?quality=75&auto=webp"
   },
   {
-    "title": "title 2",
-    "content": "content 2",
-    "author": "author 2",
-    "category": "category 2",
-    "image": "image 2",
-    "created_at": 1689108363,
-    "updated_at": 1689108363,
-    "id": "2"
+    "title": "The Climate Crisis Is Worse Than You Can Imagine. Here’s What Happens If You Try.",
+    "content": "A climate scientist spent years trying to get people to pay attention to the disaster ahead. His wife is exhausted. His older son thinks there’s no future. And nobody but him will use the outdoor toilet he built to shrink his carbon footprint.",
+    "author": "David Wallace-Wells",
+    "category": "general",
+    "image": "https://static01.nyt.com/images/2021/07/11/magazine/11mag-climate/11mag-climate-superJumbo.jpg?quality=75&auto=webp"
+  },
+  {
+    "title": "Real Madrid’s Florentino Pérez, Soccer’s Most Powerful Figure, Takes On FIFA",
+    "content": "The Real Madrid president is leading a breakaway that could reshape soccer’s global landscape. But his past is a window into the superclubs’ future.",
+    "author": "Tariq Panja",
+    "category": "sports",
+    "image": ""
   },
   {
     "title": "title 3",
