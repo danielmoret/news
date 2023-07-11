@@ -1,19 +1,37 @@
 from flask_sqlalchemy import SQLAlchemy
+from enum import Enum
 
 db = SQLAlchemy()
 
-class User(db.Model):
+class Category(Enum):
+    business = "business"
+    entertainment = "entertainment"
+    general = "general"
+    health = "health"
+    science = "science"
+    sports = "sports"
+    technology = "technology"
+
+class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=False, nullable=False)
-    is_active = db.Column(db.Boolean(), unique=False, nullable=False)
+    title = db.Column(db.String(120), nullable=False)
+    content= db.Column(db.String(120), nullable=False)
+    author = db.Column(db.String(120), nullable=False)
+    category = db.Column(db.Enum(Category), nullable=False)
+    image = db.Column(db.String(120), nullable=False)
+    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
+    updated_at = db.Column(db.DateTime, default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
 
     def __repr__(self):
-        return f'<User {self.email}>'
+        return f'<News {self.title}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "email": self.email,
+            "title": self.title,
+            "content": self.content,
+            "author": self.author,
+            "category": self.category.value,
+            "image": self.image
             # do not serialize the password, its a security breach
         }
