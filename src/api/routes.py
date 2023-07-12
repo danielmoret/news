@@ -44,7 +44,7 @@ def get_news():
     queryContent = f'%{request.args.get("content","")}%'
 
     query = News.query.filter(News.title.ilike(queryTitle),
-        News.content.like(queryContent)
+        News.content.ilike(queryContent)
         
     )
 
