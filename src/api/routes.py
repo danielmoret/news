@@ -43,9 +43,9 @@ def get_news():
     queryTitle = f'%{request.args.get("title","")}%'
     queryContent = f'%{request.args.get("content","")}%'
 
-    query = News.query.filter(
-        News.title.like(queryTitle),
+    query = News.query.filter(News.title.ilike(queryTitle),
         News.content.like(queryContent)
+        
     )
 
     if queryCategory:
@@ -54,8 +54,8 @@ def get_news():
         else:    
             query = query.filter(News.category == queryCategory)
 
-    query_filter = query.all()
+    news_filter = query.all()
     
 
-    all_news = list(map(lambda news: news.serialize(), query_filter))
+    all_news = list(map(lambda news: news.serialize(), news_filter))
     return jsonify(all_news), 200
