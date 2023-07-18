@@ -5,3 +5,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Establece el ancho inicial del input */
+.divInput {
+  width: 100%;
+  height: 20px;
+}
+.miInput {
+  border-bottom: 1px solid black;
+}
+
+/* Establece la transición de ancho */
+.miInput {
+  transition: width 1s;
+}
+
+/* Define la animación de keyframes */
+@keyframes animarInputInicio {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes animarInputFinal {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+/* Asigna la animación al input */
+.animationInicio {
+  animation: animarInputInicio 1s forwards;
+}
+.animationFinal {
+  animation: animarInputFinal 1s forwards;
+}

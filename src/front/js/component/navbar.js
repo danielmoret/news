@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Search from './Search'
 
 export const Navbar = () => {
   return (
     <nav className="border-b-2 border-b-black">
+      <Search />
+
       <div className="flex justify-center py-8 divide-x">
         <Link to="/" className="font-newyorkfont text-5xl">
           The Daniel Times
