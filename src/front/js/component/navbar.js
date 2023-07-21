@@ -12,7 +12,7 @@ export const Navbar = () => {
           The Daniel Times
         </Link>
       </div>
-      <div class="flex justify-around font-semibold text-gray-400 ">
+      <div class="sm:flex sm:justify-around sm:font-semibold sm:text-gray-400 hidden">
         <button id="buss" class="tab-btn active hover:text-neutral-800">
           BUSSINES
         </button>
