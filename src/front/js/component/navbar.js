@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Search from './Search'
+import Menu from './menu'
 
 export const Navbar = () => {
   return (
     <nav className="border-b-2 border-b-black">
-      <Search />
+      <div className="flex items-center pt-4 ml-1">
+        <Menu />
+        <Search />
+      </div>
 
       <div className="flex justify-center py-8 divide-x">
         <Link to="/" className="font-newyorkfont text-5xl">
