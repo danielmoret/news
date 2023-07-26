@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <div className="relative sm:hidden">
       <button
-        className="block text-gray-500 hover:text-gray-900 focus:outline-none"
+        className="block  text-gray-500 hover:text-gray-900 focus:outline-none"
         onClick={toggleMenu}
       >
         <svg

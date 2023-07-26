@@ -4,7 +4,7 @@ function Search() {
   const [showSearch, setShowSearch] = useState(false)
   return (
     <>
-      <div className="flex px-3">
+      <div className="flex px-3 w-full">
         <svg
           className="svg-icon search-icon"
           aria-labelledby="title desc"

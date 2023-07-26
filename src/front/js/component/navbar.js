@@ -6,7 +6,7 @@ import Menu from './menu'
 export const Navbar = () => {
   return (
     <nav className="border-b-2 border-b-black">
-      <div className="flex items-center pt-4 ml-1">
+      <div className="flex pt-4 ml-1">
         <Menu />
         <Search />
       </div>
