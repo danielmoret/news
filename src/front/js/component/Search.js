@@ -16,7 +16,7 @@ function Search() {
           onClick={() => setShowSearch(!showSearch)}
         >
           <g className="search-path" fill="none" stroke="black" strokeWidth="2">
-            <path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4" />
+            <path strokeLinecap="square" d="M18.5 18.3l-5.4-5.4" />
             <circle cx="8" cy="8" r="7" />
           </g>
         </svg>
