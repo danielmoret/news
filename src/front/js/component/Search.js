@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 import { Context } from '../store/appContext'
+
 function Search() {
   const [showSearch, setShowSearch] = useState(false)
-  const { store, actions } = useContext(Context)
-  let timeout
+  const { actions } = useContext(Context)
 
   const searchNews = (e) => {
     e.persist()
