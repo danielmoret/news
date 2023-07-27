@@ -4,9 +4,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       news: []
     },
     actions: {
-      getAllNews: async () => {
+      getNews: async (search = '') => {
         try {
-          const response = await fetch(`${process.env.BACKEND_URL}/api/news`)
+          const response = await fetch(
+            `${process.env.BACKEND_URL}/api/news?content=${search}&title=${search}`
+          )
           if (response.ok) {
             const data = await response.json()
             setStore({ news: data })

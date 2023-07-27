@@ -1,7 +1,18 @@
-import React, { useState } from 'react'
-
+import React, { useState, useContext } from 'react'
+import { Context } from '../store/appContext'
 function Search() {
   const [showSearch, setShowSearch] = useState(false)
+  const { store, actions } = useContext(Context)
+  let timeout
+
+  const searchNews = (e) => {
+    e.persist()
+    if (timeout) clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      actions.getNews(e.target.value)
+    }, 500)
+  }
+
   return (
     <>
       <div className="flex px-3 w-full">
@@ -26,6 +37,7 @@ function Search() {
             className={`miInput focus:outline-none  ${
               showSearch ? 'animationInicio' : 'animationFinal'
             }`}
+            onChange={searchNews}
           />
         </div>
       </div>
